@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Create Account | ELVIORA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="account-page">
+    <nav class="navbar1">
+        <div class="logo">ELVIORA</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="amenities.html">Amenities</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+    </nav>
+
+    <main class="account-wrap">
+        <section class="account-card">
+            <p class="account-kicker">WELCOME TO ELVIORA</p>
+            <h1 id="accountHeading">Create Your Account</h1>
+            <p class="account-intro">Create an account or log in to continue to booking.</p>
+
+            <div class="account-tabs">
+                <button type="button" id="showSignup" class="account-tab active">CREATE ACCOUNT</button>
+                <button type="button" id="showLogin" class="account-tab">LOGIN</button>
+            </div>
+
+            <form id="signupForm">
+                <label for="signupName">Full Name</label>
+                <input type="text" id="signupName" required autocomplete="name" placeholder="Enter your full name">
+                <label for="signupEmail">Email Address</label>
+                <input type="email" id="signupEmail" required autocomplete="email" placeholder="Enter your email">
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" required minlength="6" autocomplete="new-password" placeholder="At least 6 characters">
+                <button type="submit" class="account-submit">CREATE ACCOUNT</button>
+            </form>
+
+            <form id="loginForm" hidden>
+                <label for="loginEmail">Email Address</label>
+                <input type="email" id="loginEmail" required autocomplete="email" placeholder="Enter your email">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" required autocomplete="current-password" placeholder="Enter your password">
+                <button type="submit" class="account-submit">LOGIN</button>
+            </form>
+
+            <p id="accountMessage" class="account-message" role="status" aria-live="polite"></p>
+            <button type="button" id="logoutButton" class="logout-button" hidden>LOG OUT</button>
+            <p class="account-note">Demo only: account data is stored in this browser, not on a secure server.</p>
+        </section>
+    </main>
+
+    <footer class="elviora-footer">
+        <h2>ELVIORA</h2>
+        <p>A refined stay, beautifully remembered.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="amenities.html">Amenities</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <p class="footer-copyright">© 2026 ELVIORA. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

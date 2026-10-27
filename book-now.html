@@ -1,0 +1,968 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay | ELVIORA</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #1C1B19;
+    color: #F2EDE5;
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+nav {
+    background: #22211F;
+    color: #F2EDE5;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #39342D;
+}
+
+.logo {
+    font: bold 28px "Playfair Display", serif;
+    letter-spacing: 3px;
+    color: #C9A45C;
+}
+
+nav a {
+    color: #F2EDE5;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 12px;
+}
+
+nav a:hover {
+    color: #C9A45C;
+}
+
+.heading {
+    text-align: center;
+    padding: 35px 15px 20px;
+}
+
+.heading h1 {
+    font: 600 38px "Playfair Display", serif;
+    color: #F2EDE5;
+}
+
+.heading p,
+.muted {
+    color: #A9A197;
+    font-size: 14px;
+}
+
+.steps {
+    max-width: 950px;
+    margin: 10px auto 25px;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.step {
+    text-align: center;
+    padding: 12px 4px;
+    border-bottom: 3px solid #39342D;
+    color: #A9A197;
+    font-size: 11px;
+}
+
+.step span {
+    display: block;
+    margin: 0 auto 7px;
+    background: #26221D;
+    color: #A9A197;
+    width: 27px;
+    height: 27px;
+    line-height: 27px;
+    border-radius: 50%;
+}
+
+.step.active {
+    border-color: #C9A45C;
+    color: #F2EDE5;
+}
+
+.step.active span {
+    background: #C9A45C;
+    color: #211C15;
+}
+
+main {
+    max-width: 950px;
+    margin: 0 auto 50px;
+    padding: 0 15px;
+}
+
+.panel {
+    background: #26221D;
+    color: #F2EDE5;
+    padding: 28px;
+    border: 1px solid #39342D;
+    border-radius: 5px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font: 600 27px "Playfair Display", serif;
+    color: #F2EDE5;
+}
+
+.hotel {
+    display: grid;
+    grid-template-columns: 38% 1fr;
+    border: 1px solid #39342D;
+    margin: 20px 0;
+}
+
+.hotel img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.hotel-info {
+    padding: 20px;
+}
+
+.hotel-info p {
+    color: #A9A197;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #F2EDE5;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #39342D;
+    background: #191816;
+    color: #F2EDE5;
+    border-radius: 3px;
+    font: 14px Montserrat, Arial, sans-serif;
+}
+
+input:focus,
+select:focus {
+    outline: 1px solid #C9A45C;
+    border-color: #C9A45C;
+}
+
+input::placeholder {
+    color: #A9A197;
+}
+
+.field.full {
+    grid-column: 1 / -1;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+button,
+.home-btn {
+    border: none;
+    background: #C9A45C;
+    color: #211C15;
+    padding: 14px 20px;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+button:hover,
+.home-btn:hover {
+    background: #D8B975;
+}
+
+button.secondary {
+    background: #39342D;
+    color: #F2EDE5;
+}
+
+button.secondary:hover {
+    background: #4A4339;
+}
+
+.summary {
+    background: #191816;
+    color: #F2EDE5;
+    border: 1px solid #39342D;
+    padding: 18px;
+    margin: 20px 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 11px 0;
+    border-bottom: 1px solid #39342D;
+    font-size: 13px;
+}
+
+.summary-row:last-child {
+    border-bottom: none;
+}
+
+.summary-row strong {
+    text-align: right;
+    color: #F2EDE5;
+}
+
+.price {
+    color: #C9A45C;
+    font-size: 20px;
+}
+
+.message {
+    color: #E58C7E;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.success {
+    color: #C9A45C;
+}
+
+#confirmationStep h2 {
+    color: #C9A45C !important;
+}
+
+#confirmationStep > div:first-child > div {
+    color: #C9A45C !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+footer {
+    background: #22211F;
+    color: #A9A197;
+    text-align: center;
+    padding: 25px;
+    font-size: 12px;
+    border-top: 1px solid #39342D;
+}
+
+
+
+
+/* SHARED ELVIORA FOOTER */
+.elviora-footer {
+    width: 100%;
+    background: #22211F;
+    color: #A9A197;
+    text-align: center;
+    padding: 30px 20px 20px;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 12px;
+    border-top: 1px solid #39342D;
+}
+
+.elviora-footer h2 {
+    margin: 0 0 10px;
+    color: #C9A45C;
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.elviora-footer p {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.elviora-footer .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 22px auto;
+    padding: 0;
+}
+
+.elviora-footer .footer-links a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #F2EDE5;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.elviora-footer .footer-links a:hover {
+    color: #C9A45C;
+}
+
+.elviora-footer .footer-copyright {
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 18px 0 0;
+    border-top: 1px solid #39342D;
+    text-align: center;
+}
+
+
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 0 12px 0 0;
+    }
+
+    .heading h1 {
+        font-size: 30px;
+    }
+
+    .step {
+        font-size: 9px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .hotel {
+        grid-template-columns: 1fr;
+    }
+
+    .hotel img {
+        height: 190px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .field.full {
+        grid-column: auto;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    button,
+    .home-btn {
+        text-align: center;
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body >
+
+<nav>
+    <div class="logo">ELVIORA</div>
+    <div>
+        <a href="index.html">HOME</a>
+        <a href="rooms.html">ROOMS</a>
+        <a href="amenities.html">AMENITIES</a>
+        <a href="gallery.html">GALLERY</a>
+
+    </div>
+</nav>
+
+<header class="heading">
+    <p>YOUR STAY, BEAUTIFULLY PLANNED</p>
+    <h1>Book Your Stay</h1>
+    <p>Complete the steps below to confirm your stay at ELVIORA.</p>
+</header>
+
+
+<div class="steps">
+    <div class="step active" data-step="1"><span>1</span>Sign In</div>
+    <div class="step" data-step="2"><span>2</span>Details</div>
+    <div class="step" data-step="3"><span>3</span>Review</div>
+    <div class="step" data-step="4"><span>4</span>Guest Details</div>
+</div>
+
+
+<main>
+<section class="panel">
+
+<!-- STEP 1: SIGN IN -->
+<div id="signinStep" >
+    <h2>1. Sign In to ELVIORA</h2>
+    <p class="muted">Sign in to continue with your room booking.</p>
+
+    <form id="bookingLoginForm">
+        <div class="form-grid">
+            <div class="field full">
+                <label for="bookingLoginEmail">EMAIL ADDRESS</label>
+                <input type="email" id="bookingLoginEmail"
+                       required autocomplete="email"
+                       placeholder="Enter your email">
+            </div>
+
+            <div class="field full">
+                <label for="bookingLoginPassword">PASSWORD</label>
+                <input type="password" id="bookingLoginPassword"
+                       required autocomplete="current-password"
+                       placeholder="Enter your password">
+            </div>
+        </div>
+
+        <div class="actions">
+            <button type="submit">SIGN IN & CONTINUE →</button>
+        </div>
+    </form>
+
+    <p id="loginMessage" class="message" role="status"></p>
+    <p id="welcomeMessage" class="success" role="status"></p>
+
+    <p class="muted">
+        Don't have an account?
+        <a href="account.html?next=booking">Create an account</a>
+    </p>
+</div>
+
+ 
+
+    <!-- STEP 3: BOOKING DETAILS -->
+    <div id="detailsStep" class="hidden">
+        <h2>3. Enter Booking Details</h2>
+        <p class="muted">Select your dates, guests, rooms and room type.</p>
+
+        <div class="form-grid">
+            <div>
+                <label for="checkin">CHECK-IN DATE</label>
+                <input type="date" id="checkin" required>
+            </div>
+
+            <div>
+                <label for="checkout">CHECK-OUT DATE</label>
+                <input type="date" id="checkout" required>
+            </div>
+
+            <div>
+                <label for="guests">NUMBER OF GUESTS</label>
+                <select id="guests">
+                    <option value="1">1 Guest</option>
+                    <option value="2" selected>2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6">6 Guests</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="rooms">NUMBER OF ROOMS</label>
+                <select id="rooms">
+                    <option value="1">1 Room</option>
+                    <option value="2">2 Rooms</option>
+                    <option value="3">3 Rooms</option>
+                    <option value="4">4 Rooms</option>
+                </select>
+            </div>
+
+            <div class="field full">
+                <label for="roomType">ROOM TYPE</label>
+                <select id="roomType">
+                    <option value="Deluxe Room" data-price="6000">
+                        Deluxe Room — ₹6,000 / night
+                    </option>
+                    <option value="Premier Room" data-price="9000">
+                        Premier Room — ₹9,000 / night
+                    </option>
+                    <option value="Royal Suite" data-price="15000">
+                        Royal Suite — ₹15,000 / night
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="secondary" id="backHotel">← BACK</button>
+            <button id="reviewButton">REVIEW BOOKING →</button>
+        </div>
+
+        <p id="detailsMessage" class="message"></p>
+    </div>
+
+    <!-- STEP 4: REVIEW -->
+    <div id="reviewStep" class="hidden">
+        <h2>4. Review Booking</h2>
+        <p class="muted">Check your booking details and estimated price.</p>
+
+        <div id="bookingSummary" class="summary"></div>
+
+        <p class="muted">
+        Please review your selected room, stay dates and total price before continuing.
+        </p>
+
+        <div class="actions">
+            <button class="secondary" id="editButton">← EDIT DETAILS</button>
+            <button id="guestButton">CONTINUE →</button>
+        </div>
+    </div>
+
+    <!-- STEP 5: GUEST DETAILS -->
+    <div id="guestStep" class="hidden">
+        <h2>5. Enter Guest Details</h2>
+        <p class="muted">Enter the primary guest's contact details.</p>
+
+        <div class="form-grid">
+            <div class="field full">
+                <label for="guestName">FULL NAME</label>
+                <input type="text" id="guestName" required
+                       autocomplete="name" placeholder="Enter full name">
+            </div>
+
+            <div>
+                <label for="guestEmail">EMAIL ADDRESS</label>
+                <input type="email" id="guestEmail" required
+                       autocomplete="email" placeholder="Enter email">
+            </div>
+
+            <div>
+                <label for="guestPhone">PHONE NUMBER</label>
+                <input type="tel" id="guestPhone" required
+                       autocomplete="tel" inputmode="tel"
+                       pattern="[0-9+() -]{10,18}"
+                       placeholder="Enter phone number">
+            </div>
+        </div>
+
+        <div id="finalSummary" class="summary"></div>
+
+        <div class="actions">
+            <button class="secondary" id="backReview">← BACK</button>
+            <button id="submitBooking">SUBMIT BOOKING </button>
+        </div>
+
+        <p id="guestMessage" class="message"></p>
+    </div>
+
+    
+     <!-- CONFIRMATION -->
+     <div id="confirmationStep" class="hidden">
+         <div style="text-align: center; padding: 25px 10px;">
+
+        <div style="font-size: 60px; color: #287345;">✓</div>
+
+        <h2 style="color: #287345;">Booking Successful!</h2>
+
+        <p class="muted">
+            Thank you for choosing ELVIORA.
+            Your booking details have been saved successfully.
+        </p>
+
+        </div>
+
+       <div id="confirmationSummary" class="summary"></div>
+
+      <div class="actions">
+        <a class="home-btn" href="index.html">BACK TO HOME</a>
+        <button class="secondary" id="newBooking">BOOK ANOTHER ROOM</button>
+      </div>
+    </div>
+
+
+
+</section>
+</main>
+
+<!-- SHARED ELVIORA FOOTER -->
+<footer class="elviora-footer">
+    <h2>ELVIORA</h2>
+    <p>A refined stay, beautifully remembered.</p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+    <p class="footer-copyright">
+        © 2026 ELVIORA. All Rights Reserved.
+    </p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const SESSION_KEY = "elvioraCurrentUser";
+    const USERS_KEY = "elvioraUsers";
+    const BOOKINGS_KEY = "elvioraBookings";
+    const DRAFT_KEY = "elvioraBookingDraft";
+
+    const $ = id => document.getElementById(id);
+
+    const sections = {
+        1: $("signinStep"),
+        2: $("detailsStep"),
+        3: $("reviewStep"),
+        4: $("guestStep"),
+        5: $("confirmationStep")
+    };
+
+    function readJSON(key, fallback) {
+        try {
+            return JSON.parse(localStorage.getItem(key)) ?? fallback;
+        } catch {
+            return fallback;
+        }
+    }
+
+    function getDraft() {
+        return readJSON(DRAFT_KEY, {});
+    }
+
+    function saveDraft(data) {
+        localStorage.setItem(DRAFT_KEY, JSON.stringify(data));
+    }
+
+    function signedIn() {
+        return Boolean(localStorage.getItem(SESSION_KEY));
+    }
+
+    function showStep(number) {
+        Object.entries(sections).forEach(([key, element]) => {
+            if (element) {
+                element.classList.toggle(
+                    "hidden",
+                    Number(key) !== number
+                );
+            }
+        });
+
+        document.querySelectorAll("[data-step]").forEach(element => {
+            const current = Number(element.dataset.step);
+            element.classList.toggle(
+                "active",
+                current === number ||
+                (number === 5 && current === 4)
+            );
+        });
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function openDetails() {
+        $("welcomeMessage").textContent = "Welcome to ELVIORA!";
+
+        const data = getDraft();
+
+        if (data.checkin) $("checkin").value = data.checkin;
+        if (data.checkout) $("checkout").value = data.checkout;
+        if (data.guests) $("guests").value = String(data.guests);
+        if (data.rooms) $("rooms").value = String(data.rooms);
+        if (data.roomType) $("roomType").value = data.roomType;
+
+        showStep(2);
+
+        // Show the welcome message on the booking details screen.
+        $("detailsMessage").className = "message success";
+        $("detailsMessage").textContent = "Welcome to ELVIORA! You can now book a room.";
+    }
+
+    // Sign in using the account created on account.html.
+    $("bookingLoginForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const email = $("bookingLoginEmail").value.trim().toLowerCase();
+        const password = $("bookingLoginPassword").value;
+
+        const users = readJSON(USERS_KEY, []);
+
+        const user = users.find(item =>
+            String(item.email || "").toLowerCase() === email &&
+            item.password === password
+        );
+
+        if (!user) {
+            $("loginMessage").textContent =
+                "Incorrect email or password. Please try again.";
+            $("welcomeMessage").textContent = "";
+            return;
+        }
+
+        localStorage.setItem(SESSION_KEY, user.email);
+        $("loginMessage").textContent = "";
+        openDetails();
+    });
+
+    // Set minimum dates to today.
+    const now = new Date();
+    const todayString = new Date(
+        now.getTime() - now.getTimezoneOffset() * 60000
+    ).toISOString().slice(0, 10);
+
+    $("checkin").min = todayString;
+    $("checkout").min = todayString;
+
+    $("checkin").addEventListener("change", function () {
+        $("checkout").min = this.value || todayString;
+
+        if ($("checkout").value && $("checkout").value <= this.value) {
+            $("checkout").value = "";
+        }
+    });
+
+    function getBookingData() {
+        const data = getDraft();
+
+        data.hotel = "ELVIORA Hotel & Resort";
+        data.checkin = $("checkin").value;
+        data.checkout = $("checkout").value;
+        data.guests = Number($("guests").value);
+        data.rooms = Number($("rooms").value);
+
+        const room = $("roomType").selectedOptions[0];
+        data.roomType = room.value;
+        data.pricePerNight = Number(room.dataset.price);
+
+        return data;
+    }
+
+    function getNights(data) {
+        return Math.round(
+            (new Date(data.checkout + "T00:00:00") -
+             new Date(data.checkin + "T00:00:00")) / 86400000
+        );
+    }
+
+    function formatMoney(amount) {
+        return new Intl.NumberFormat("en-IN", {
+            style: "currency",
+            currency: "INR",
+            maximumFractionDigits: 0
+        }).format(amount);
+    }
+
+    function summaryHTML(data) {
+        const nights = getNights(data);
+        const total = nights * data.pricePerNight * data.rooms;
+
+        return `
+            <div class="summary-row">
+                <span>Hotel</span><strong>${data.hotel}</strong>
+            </div>
+            <div class="summary-row">
+                <span>Room Type</span><strong>${data.roomType}</strong>
+            </div>
+            <div class="summary-row">
+                <span>Check-in</span><strong>${data.checkin}</strong>
+            </div>
+            <div class="summary-row">
+                <span>Check-out</span><strong>${data.checkout}</strong>
+            </div>
+            <div class="summary-row">
+                <span>Number of Nights</span><strong>${nights}</strong>
+            </div>
+            <div class="summary-row">
+                <span>Guests / Rooms</span>
+                <strong>${data.guests} / ${data.rooms}</strong>
+            </div>
+            <div class="summary-row">
+                <span>Price per Room / Night</span>
+                <strong>${formatMoney(data.pricePerNight)}</strong>
+            </div>
+            <div class="summary-row">
+                <span>Estimated Total</span>
+                <strong class="price">${formatMoney(total)}</strong>
+            </div>
+        `;
+    }
+
+    // Check availability button: validates dates and displays the estimate.
+    $("reviewButton").textContent = "Book  →";
+
+    $("reviewButton").addEventListener("click", function () {
+        const data = getBookingData();
+
+        if (!data.checkin || !data.checkout) {
+            $("detailsMessage").className = "message";
+            $("detailsMessage").textContent =
+                "Please select both check-in and check-out dates.";
+            return;
+        }
+
+        if (data.checkin < todayString) {
+            $("detailsMessage").className = "message";
+            $("detailsMessage").textContent =
+                "Check-in cannot be earlier than today.";
+            return;
+        }
+
+        if (getNights(data) <= 0) {
+            $("detailsMessage").className = "message";
+            $("detailsMessage").textContent =
+                "Check-out must be after check-in.";
+            return;
+        }
+
+        if (!signedIn()) {
+            saveDraft(data);
+            showStep(1);
+            $("loginMessage").textContent =
+                "Please sign in before continuing with your booking.";
+            return;
+        }
+
+        saveDraft(data);
+        $("detailsMessage").textContent = "";
+        $("bookingSummary").innerHTML = summaryHTML(data);
+        showStep(3);
+    });
+
+    $("backHotel").addEventListener("click", () => showStep(1));
+    $("editButton").addEventListener("click", () => showStep(2));
+    $("backReview").addEventListener("click", () => showStep(3));
+
+    $("guestButton").addEventListener("click", function () {
+        const data = getDraft();
+        const users = readJSON(USERS_KEY, []);
+        const currentEmail = localStorage.getItem(SESSION_KEY);
+
+        const user = users.find(item =>
+            String(item.email || "").toLowerCase() ===
+            String(currentEmail || "").toLowerCase()
+        );
+
+        if (user) {
+            $("guestName").value = user.name || "";
+            $("guestEmail").value = user.email || "";
+        }
+
+        $("finalSummary").innerHTML = summaryHTML(data);
+        showStep(4);
+    });
+
+    $("submitBooking").addEventListener("click", function () {
+        const name = $("guestName").value.trim();
+        const email = $("guestEmail").value.trim();
+        const phone = $("guestPhone").value.trim();
+
+        if (!name || !email || !phone) {
+            $("guestMessage").textContent =
+                "Please enter your name, email and phone number.";
+            return;
+        }
+
+        if (!$("guestEmail").checkValidity() ||
+            !$("guestPhone").checkValidity()) {
+            $("guestMessage").textContent =
+                "Please enter a valid email and phone number.";
+            return;
+        }
+
+        const data = getDraft();
+
+        if (!data.checkin || !data.checkout || getNights(data) <= 0) {
+            $("guestMessage").textContent =
+                "Your booking dates are invalid. Please go back and check them.";
+            return;
+        }
+
+        Object.assign(data, {
+            guestName: name,
+            guestEmail: email,
+            guestPhone: phone,
+            userEmail: localStorage.getItem(SESSION_KEY),
+            id: "ELV-" + Date.now(),
+            createdAt: new Date().toISOString(),
+            status: "Booking Successful"
+        });
+
+        const bookings = readJSON(BOOKINGS_KEY, []);
+        bookings.push(data);
+
+        localStorage.setItem(BOOKINGS_KEY, JSON.stringify(bookings));
+
+        $("confirmationSummary").innerHTML =
+            summaryHTML(data) +
+            `<div class="summary-row">
+                <span>Booking Reference</span><strong>${data.id}</strong>
+            </div>
+            <div class="summary-row">
+                <span>Guest Name</span><strong></strong>
+            </div>`;
+
+        $("confirmationSummary").lastElementChild.lastElementChild.textContent =
+            name;
+
+        localStorage.removeItem(DRAFT_KEY);
+        showStep(5);
+    });
+
+    $("newBooking").addEventListener("click", function () {
+        localStorage.removeItem(DRAFT_KEY);
+
+        $("checkin").value = "";
+        $("checkout").value = "";
+        $("guests").value = "2";
+        $("rooms").value = "1";
+        $("roomType").selectedIndex = 0;
+        $("guestName").value = "";
+        $("guestEmail").value = "";
+        $("guestPhone").value = "";
+        $("loginMessage").textContent = "";
+
+        if (signedIn()) {
+            openDetails();
+        } else {
+            showStep(1);
+        }
+    });
+
+    // If already signed in, continue directly to room details.
+    if (signedIn()) {
+        openDetails();
+    } else {
+        showStep(1);
+    }
+});
+</script>
+
+
+
+</body>
+</html>

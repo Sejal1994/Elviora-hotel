@@ -1,0 +1,1688 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #171512;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    background-image: url("home.jpeg");
+    min-height: 100vh;
+
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(23, 21, 18, 0.55),
+            rgba(23, 21, 18, 0.55)
+        ),
+        url("home.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* =========================
+   NAVBAR
+
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 90px;
+
+    padding: 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+     background: #1f1f1f;
+    transition: background-color 0.3s ease;
+}
+
+.navbar1 {
+    width: 100%;
+    height: 90px;
+
+    padding: 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background: #1f1f1f;
+}
+
+.navbar2 {
+    width: 100%;
+    height: 90px;
+
+    padding: 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background: #1f1f1f;
+}
+
+.navbar3 {
+    width: 100%;
+    height: 90px;
+
+    padding: 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background: #1f1f1f;
+}
+
+.booking-section {
+    padding-top: 90px;
+}
+.navbar.scrolled {
+    background: #1f1f1f;
+}
+
+.logo {
+    color: #C6A15B;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+}
+
+
+.nav-links a {
+    color: #F5F0E6;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #C6A15B;
+}
+
+
+.book-btn {
+    background: #C6A15B;
+
+    color: #171512 !important;
+
+    padding: 13px 22px;
+
+    font-weight: 600 !important;
+
+    letter-spacing: 1px;
+}
+
+
+.book-btn:hover {
+    background: #F5F0E6;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -40%);
+
+    text-align: center;
+
+    width: 100%;
+}
+
+
+.hero-content h1 {
+    color: #F5F0E6;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 64px;
+
+    line-height: 1.1;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+.hero-content p {
+    color: #F5F0E6;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-top: 25px;
+
+    letter-spacing: 1px;
+}
+
+
+.hero-btn {
+    display: inline-block;
+
+    margin-top: 32px;
+
+    padding: 15px 32px;
+
+    background: #C6A15B;
+
+    color: #171512;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+}
+
+
+.hero-btn:hover {
+    background: #F5F0E6;
+}
+
+
+/* =========================
+   BOOKING SECTION
+========================= */
+
+.booking-section {
+    position: relative;
+
+    margin-top: -55px;
+
+    padding: 0 70px;
+
+    z-index: 5;
+}
+
+
+.booking-bar {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 25px 30px;
+
+    background: #24201B;
+
+    border: 1px solid #3A342B;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.booking-item {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    min-width: 150px;
+}
+
+
+.booking-item label {
+    color: #C9C0AF;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+}
+
+
+.booking-item input,
+.booking-item select {
+    width: 100%;
+
+    background: transparent;
+
+    color: #F5F0E6;
+
+    border: none;
+
+    border-bottom: 1px solid #3A342B;
+
+    padding: 8px 0;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.booking-item input {
+    color-scheme: dark;
+}
+
+
+.booking-item select option {
+    background: #24201B;
+
+    color: #F5F0E6;
+}
+
+
+.availability-btn {
+    background: #C6A15B;
+
+    color: #171512;
+
+    border: none;
+
+    padding: 17px 25px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+
+.availability-btn:hover {
+    background: #F5F0E6;
+}
+
+
+/* =========================
+   ABOUT ELVIORA
+========================= */
+
+.about-section {
+    background: #171512;
+
+    padding: 120px 70px;
+}
+
+
+.about-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* LEFT IMAGE */
+
+.about-image {
+    width: 100%;
+
+    height: 600px;
+
+    overflow: hidden;
+}
+
+
+.about-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* RIGHT CONTENT */
+
+.about-content {
+    padding: 20px 0;
+}
+
+
+.about-label {
+    color: #C6A15B;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+.about-content h2 {
+    color: #F5F0E6;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 55px;
+
+    line-height: 1.15;
+
+    font-weight: 500;
+
+    margin-top: 20px;
+}
+
+
+.about-content p {
+    color: #C9C0AF;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    max-width: 450px;
+
+    margin-top: 25px;
+}
+
+
+/* DISCOVER MORE BUTTON */
+
+.discover-btn {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 14px 24px;
+
+    border: 1px solid #C6A15B;
+
+    color: #C6A15B;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+}
+
+
+.discover-btn:hover {
+    background: #C6A15B;
+
+    color: #171512;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.about-stats {
+    display: flex;
+
+    gap: 60px;
+
+    margin-top: 55px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #3A342B;
+}
+
+
+.stat h3 {
+    color: #C6A15B;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+}
+
+
+.stat span {
+    display: block;
+
+    color: #C9C0AF;
+
+    font-size: 11px;
+
+    margin-top: 5px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 30px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .booking-section {
+        padding: 0 30px;
+    }
+
+    .booking-bar {
+        flex-wrap: wrap;
+    }
+
+    .booking-item {
+        min-width: 200px;
+    }
+
+    .about-container {
+        gap: 50px;
+    }
+
+    .about-content h2 {
+        font-size: 45px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .booking-section {
+        margin-top: 0;
+
+        padding: 30px 20px;
+    }
+
+    .booking-bar {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 25px;
+    }
+
+    .booking-item {
+        width: 100%;
+    }
+
+    .availability-btn {
+        width: 100%;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        padding: 80px 25px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .about-image {
+        height: 450px;
+    }
+
+    .about-content h2 {
+        font-size: 42px;
+    }
+
+    .about-stats {
+        gap: 30px;
+    }
+}
+
+/* =========================
+   ROOMS PAGE
+========================= */
+
+.rooms-header {
+    min-height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(23, 21, 18, 0.65),
+            rgba(23, 21, 18, 0.65)
+        ),
+        url("rooms-header.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rooms-header-content {
+    max-width: 700px;
+    padding: 100px 25px 30px;
+}
+
+.rooms-label {
+    color: #C6A15B;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.rooms-header h1 {
+    color: #F5F0E6;
+    font-family: "Playfair Display", serif;
+    font-size: 60px;
+    font-weight: 500;
+    margin-top: 18px;
+}
+
+.rooms-header p {
+    color: #C9C0AF;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   ROOMS SECTION
+========================= */
+
+
+.rooms-section {
+    background: #171512;
+    padding: 30px 70px 110px;
+}
+
+
+.rooms-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.rooms-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 60px;
+}
+
+.rooms-heading span {
+    color: #C6A15B;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.rooms-heading h2 {
+    color: #F5F0E6;
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-weight: 500;
+    margin-top: 18px;
+}
+
+.rooms-heading p {
+    color: #C9C0AF;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 18px;
+}
+
+
+/* =========================
+   ROOM GRID
+========================= */
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================
+   ROOM CARD
+========================= */
+
+.room-card {
+    background: #24201B;
+    border: 1px solid #3A342B;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+    border-color: #C6A15B;
+}
+
+
+/* =========================
+   ROOM IMAGE
+========================= */
+
+.room-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.room-card:hover .room-image img {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   ROOM CONTENT
+========================= */
+
+.room-content {
+    padding: 30px;
+}
+
+.room-type {
+    color: #C6A15B;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.room-content h3 {
+    color: #F5F0E6;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.room-content p {
+    color: #C9C0AF;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 15px;
+    min-height: 70px;
+}
+
+
+/* =========================
+   ROOM INFORMATION
+========================= */
+
+.room-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #3A342B;
+
+    color: #C9C0AF;
+    font-size: 11px;
+}
+
+
+/* =========================
+   ROOM BOTTOM
+========================= */
+
+.room-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+    margin-top: 22px;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.room-price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.room-price span {
+    color: #C9C0AF;
+    font-size: 10px;
+    width: 100%;
+}
+
+.room-price strong {
+    color: #C6A15B;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.room-price small {
+    color: #C9C0AF;
+    font-size: 10px;
+}
+
+
+/* =========================
+   VIEW DETAILS
+========================= */
+
+.room-btn {
+    color: #C6A15B;
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.room-btn:hover {
+    color: #F5F0E6;
+}
+
+
+/* =========================
+   VIEW ALL ROOMS
+========================= */
+
+.view-all-rooms {
+    text-align: center;
+    margin-top: 55px;
+}
+
+.view-all-rooms a {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    border: 1px solid #C6A15B;
+
+    color: #C6A15B;
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+}
+
+.view-all-rooms a:hover {
+    background: #C6A15B;
+    color: #171512;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .rooms-section {
+        padding: 90px 30px;
+    }
+
+    .rooms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rooms-header h1 {
+        font-size: 50px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .rooms-header {
+        min-height: 45vh;
+    }
+
+    .rooms-header h1 {
+        font-size: 40px;
+    }
+
+    .rooms-section {
+        padding: 70px 20px;
+    }
+
+    .rooms-heading h2 {
+        font-size: 38px;
+    }
+
+    .rooms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .room-image {
+        height: 300px;
+    }
+
+    .room-content {
+        padding: 25px;
+    }
+
+    .room-content h3 {
+        font-size: 27px;
+    }
+
+    .room-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* =========================================
+   AMENITIES SECTION
+   ========================================= */
+
+.amenities-section {
+    min-height: 100vh;
+    background: #24201B;
+    padding: 130px 70px 100px;
+    color: #F5F0E6;
+}
+
+
+/* =========================================
+   AMENITIES HEADER
+   ========================================= */
+
+.amenities-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    color: #C6A15B;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.amenities-header h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.section-line {
+    width: 70px;
+    height: 1px;
+    background: #C6A15B;
+    margin: 20px auto;
+}
+
+.section-description {
+    color: #C9C0AF;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+
+/* =========================================
+   AMENITIES GRID
+   ========================================= */
+
+.amenities-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================================
+   AMENITY CARD
+   ========================================= */
+
+.amenity-card {
+    min-height: 240px;
+
+    border: 1px solid #3A342B;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* =========================================
+   ICON
+   ========================================= */
+
+.amenity-icon {
+    color: #C6A15B;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================
+   CARD HEADING
+   ========================================= */
+
+.amenity-card h2 {
+    color: #F5F0E6;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    margin: 0 0 15px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+   ========================================= */
+
+.amenity-card p {
+    max-width: 280px;
+
+    color: #C9C0AF;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   DISCOVER
+   ========================================= */
+
+.discover {
+    color: #C6A15B;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    margin-top: 20px;
+
+    opacity: 0;
+    transform: translateY(8px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+   ========================================= */
+
+.amenity-card:hover {
+    border-color: #C6A15B;
+    background: #29241E;
+    transform: translateY(-5px);
+}
+
+.amenity-card:hover .amenity-icon {
+    color: #C6A15B;
+    transform: translateY(-3px);
+}
+
+.amenity-card:hover h2 {
+    color: #C6A15B;
+}
+
+.amenity-card:hover .discover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .amenities-section {
+        padding: 120px 40px 80px;
+    }
+
+    .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .amenities-section {
+        padding: 110px 20px 60px;
+    }
+
+    .amenities-header h1 {
+        font-size: 32px;
+    }
+
+    .amenities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .amenity-card {
+        min-height: 220px;
+    }
+
+}
+
+
+/* =========================================
+   GALLERY PAGE
+========================================= */
+
+.gallery-header {
+    text-align: center;
+    padding: 130px 20px 70px;
+    background: #171512;
+}
+
+.gallery-small-title {
+    color: #C6A15B;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.gallery-header h1 {
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0;
+    text-align: center;
+}
+
+.gold-line {
+    width: 70px;
+    height: 1px;
+    background: #C6A15B;
+    margin: 25px auto;
+}
+
+.gallery-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #bdb9b0;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+
+/* =========================================
+   GALLERY SECTION
+========================================= */
+
+.gallery-section {
+    background: #171512;
+    padding: 20px 70px 100px;
+}
+
+.gallery-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   GALLERY ITEMS
+========================================= */
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: #22201c;
+}
+
+.gallery-large {
+    grid-row: span 2;
+}
+
+
+/* =========================================
+   IMAGES
+========================================= */
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+
+/* =========================================
+   HOVER IMAGE EFFECT
+========================================= */
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   DARK HOVER OVERLAY
+========================================= */
+
+.gallery-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 35px 25px 25px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.85)
+    );
+
+    color: #ffffff;
+
+    transform: translateY(15px);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   OVERLAY TEXT
+========================================= */
+
+.gallery-overlay span {
+    display: block;
+
+    color: #C6A15B;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+
+.gallery-overlay h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.gallery-footer {
+    background: #11100e;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    color: #ffffff;
+}
+
+
+.gallery-footer h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+    letter-spacing: 4px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+}
+
+
+.gallery-footer p {
+    color: #aaa59c;
+
+    font-size: 14px;
+
+    font-weight: 300;
+}
+
+
+.gallery-footer .copyright {
+    margin-top: 30px;
+
+    font-size: 12px;
+
+    color: #6f6b64;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .gallery-section {
+        padding: 20px 30px 70px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 250px 250px;
+    }
+
+    .gallery-large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .gallery-header {
+        padding: 100px 20px 50px;
+    }
+
+    .gallery-header h1 {
+        font-size: 34px;
+    }
+
+    .gallery-section {
+        padding: 15px 15px 60px;
+    }
+
+    .gallery-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: repeat(5, 300px);
+
+        gap: 12px;
+    }
+
+    .gallery-large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+}
+```
+
+
+/* =========================================
+   SHARED FOOTER + ACCOUNT / BOOKING ACCESS
+   Additions: existing page styling preserved
+========================================= */
+.elviora-footer,
+.gallery-footer {
+    background: #11100e;
+    color: #F5F0E6;
+    text-align: center;
+    padding: 55px 20px 35px;
+}
+.elviora-footer h2,
+.gallery-footer h2 {
+    color: #C6A15B;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.elviora-footer p,
+.gallery-footer p {
+    color: #aaa59c;
+    font-size: 13px;
+    line-height: 1.8;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 24px 0;
+}
+.footer-links a {
+    color: #F5F0E6;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+.footer-links a:hover { color: #C6A15B; }
+.footer-copyright,
+.gallery-footer .copyright {
+    margin-top: 25px;
+    font-size: 11px !important;
+    color: #6f6b64 !important;
+}
+.login-nav-btn {
+    color: #C6A15B !important;
+    text-decoration: none;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px;
+    border: 1px solid #C6A15B;
+    padding: 11px 14px;
+    white-space: nowrap;
+}
+.booking-anchor { display: block; position: relative; top: -100px; visibility: hidden; }
+.booking-message {
+    max-width: 1200px;
+    margin: 16px auto 0;
+    color: #C6A15B;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.booking-message.error, .account-message.error { color: #ff9a8b; }
+
+.account-page { min-height: 100vh; }
+.account-wrap {
+    min-height: 80vh;
+    padding: 145px 20px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #171512;
+}
+.account-card {
+    width: 100%;
+    max-width: 520px;
+    padding: 42px;
+    border: 1px solid #3A342B;
+    background: #24201B;
+    color: #F5F0E6;
+}
+.account-kicker {
+    color: #C6A15B;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.account-card h1 {
+    margin: 15px 0;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    font-weight: 500;
+}
+.account-intro {
+    color: #C9C0AF;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+.account-tabs { display: flex; margin-bottom: 25px; }
+.account-tab {
+    flex: 1;
+    padding: 13px 8px;
+    border: 1px solid #3A342B;
+    background: transparent;
+    color: #C9C0AF;
+    cursor: pointer;
+    font: 600 10px "Montserrat", sans-serif;
+    letter-spacing: 1px;
+}
+.account-tab.active { background: #C6A15B; color: #171512; border-color: #C6A15B; }
+.account-card form { display: flex; flex-direction: column; }
+.account-card label {
+    color: #C9C0AF;
+    font-size: 12px;
+    margin: 12px 0 8px;
+}
+.account-card input {
+    width: 100%;
+    padding: 13px;
+    background: #171512;
+    color: #F5F0E6;
+    border: 1px solid #3A342B;
+    outline: none;
+    font: 13px "Montserrat", sans-serif;
+}
+.account-card input:focus { border-color: #C6A15B; }
+.account-submit {
+    margin-top: 25px;
+    padding: 15px;
+    border: 0;
+    background: #C6A15B;
+    color: #171512;
+    cursor: pointer;
+    font: 600 11px "Montserrat", sans-serif;
+    letter-spacing: 1px;
+}
+.account-submit:hover { background: #F5F0E6; }
+.account-message {
+    min-height: 20px;
+    margin-top: 18px;
+    color: #C6A15B;
+    font-size: 12px;
+    line-height: 1.6;
+}
+.account-note {
+    margin-top: 18px;
+    color: #8d877d;
+    font-size: 10px;
+    line-height: 1.6;
+}
+.logout-button {
+    padding: 10px 15px;
+    color: #C6A15B;
+    background: transparent;
+    border: 1px solid #C6A15B;
+    cursor: pointer;
+    font: 600 10px "Montserrat", sans-serif;
+}
+[hidden] { display: none !important; }
+
+@media (max-width: 700px) {
+    .account-wrap { padding: 150px 15px 50px; }
+    .account-card { padding: 28px 22px; }
+    .account-card h1 { font-size: 29px; }
+    .footer-links { gap: 15px; }
+    .login-nav-btn { padding: 8px 10px; }
+}

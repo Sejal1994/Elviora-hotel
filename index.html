@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ELVIORA</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="hero">
+        
+        
+        <!-- NAVBAR -->
+        <nav class="navbar">
+
+            <div class="logo">
+                ELVIORA
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+               <a href="rooms.html">Rooms</a>
+                <a href="amenities.html">Amenities</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="book-now.html" class="book-btn">BOOK NOW</a>
+            </div>
+
+        </nav>
+
+
+        <!-- HERO CONTENT -->
+        <div class="hero-content">
+
+            <h1>
+                A STAY BEYOND<br>
+                ORDINARY
+            </h1>
+
+            <p>
+                Experience timeless luxury and<br>
+                exceptional hospitality.
+            </p>
+
+            <a href="account.html?next=booking" class="hero-btn">
+                BOOK NOW
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BOOKING BAR
+    ========================== -->
+
+    <section class="booking-section" id="about" data-booking-section>
+        <span id="booking" class="booking-anchor"></span>
+
+        <div class="booking-bar">
+
+            <!-- CHECK-IN -->
+            <div class="booking-item">
+
+                <label for="checkin">
+                    CHECK-IN
+                </label>
+
+                <input
+                    type="date"
+                    id="checkin"
+                >
+
+            </div>
+
+
+            <!-- CHECK-OUT -->
+            <div class="booking-item">
+
+                <label for="checkout">
+                    CHECK-OUT
+                </label>
+
+                <input
+                    type="date"
+                    id="checkout"
+                >
+
+            </div>
+
+
+            <!-- GUESTS -->
+            <div class="booking-item">
+
+                <label for="guests">
+                    GUESTS
+                </label>
+
+                <select id="guests">
+                    <option>2 Guests</option>
+                    <option>1 Guest</option>
+                    <option>3 Guests</option>
+                    <option>4 Guests</option>
+                    <option>5 Guests</option>
+                    <option>6 Guests</option>
+                </select>
+
+            </div>
+
+
+            <!-- ROOM -->
+            <div class="booking-item">
+
+                <label for="room">
+                    ROOM
+                </label>
+
+                <select id="room">
+                    <option>Deluxe Room</option>
+                    <option>Premier Room</option>
+                    <option>Royal roomq</option>
+                </select>
+
+            </div>
+
+
+           <!-- BOOK NOW -->
+           <button type="button" class="availability-btn" id="checkAvailabilityBtn">
+           BOOK NOW
+           </button>
+        </div>
+        <p id="bookingMessage" class="booking-message" aria-live="polite"></p>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT ELVIORA
+    ========================== -->
+
+    <section class="about-section">
+
+        <div class="about-container">
+
+            <!-- LEFT IMAGE -->
+            <div class="about-image">
+
+                <img
+                    src="elviora.jpeg"
+                    alt="ELVIORA Hotel"
+                >
+
+            </div>
+
+
+            <!-- RIGHT CONTENT -->
+            <div class="about-content">
+
+                <span class="about-label">
+                    ABOUT ELVIORA
+                </span>
+
+                <h2>
+                    A Place to<br>
+                    Slow Down
+                </h2>
+                <p>
+                    Experience refined hospitality where
+                    timeless elegance meets modern comfort.
+                </p>
+                <!-- STATISTICS -->
+                <div class="about-stats">
+
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <span>Rooms</span>
+                    </div>
+
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <span>Service</span>
+                    </div>
+
+                    <div class="stat">
+                        <h3>4.9</h3>
+                        <span>Guest Rating</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SHARED ELVIORA FOOTER -->
+    <footer class="elviora-footer">
+        <h2>ELVIORA</h2>
+        <p>A refined stay, beautifully remembered.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="amenities.html">Amenities</a>
+            <a href="gallery.html">Gallery</a>
+            
+        </div>
+        <p class="footer-copyright">© 2026 ELVIORA. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
